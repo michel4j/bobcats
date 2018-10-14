@@ -42,6 +42,8 @@ class BobCATS(models.Model):
     prepare = models.Enum('SAFETY:PREPARE', choices=('OFF', 'ON'), default=0, desc="Prepare for Approach")
 
     # Status
+    inputs_fbk = models.BinaryInput('STATE:inputs', desc='Digital Inputs')
+    outputs_fbk = models.BinaryInput('STATE:outputs', desc='Digital Outputs')
     power_fbk = models.Enum('STATE:power', choices=('OFF', 'ON'), desc='Robot Power')
     mode_fbk = models.Enum('STATE:auto', choices=('OFF', 'ON'), desc='Auto Mode')
     default_fbk = models.Enum('STATE:default', choices=('OFF', 'ON'), desc='Default Status')
@@ -128,6 +130,12 @@ def args2port(lid, sample):
     return 'L{}{}{}'.format(lid, 'ABC'[puck], pin)
 
 
+def zero_int(text):
+    try:
+        return int(text)
+    except ValueError:
+        return 0
+
 class BobCATSApp(object):
     def __init__(self, device_name, address, command_port=1000, status_port=10000):
         self.ioc = BobCATS(device_name, callbacks=self)
@@ -147,12 +155,12 @@ class BobCATSApp(object):
         # status pvs and conversion types
         self.status_map = [
             (self.ioc.power_fbk, int), (self.ioc.mode_fbk, int), (self.ioc.default_fbk, int),
-            (self.ioc.tool_fbk, int), (self.ioc.path_fbk, str), (self.ioc.lid_tool_fbk, int),
-            (self.ioc.sample_tool_fbk, int), (self.ioc.sample_diff_fbk, int), (self.ioc.lid_diff_fbk, int),
-            (self.ioc.sample_diff_fbk, int), (self.ioc.plate_fbk, int), (self.ioc.well_fbk, int),
+            (self.ioc.tool_fbk, zero_int), (self.ioc.path_fbk, str), (self.ioc.lid_tool_fbk, zero_int),
+            (self.ioc.sample_tool_fbk, zero_int), (self.ioc.sample_diff_fbk, zero_int), (self.ioc.lid_diff_fbk, zero_int),
+            (self.ioc.sample_diff_fbk, zero_int), (self.ioc.plate_fbk, zero_int), (self.ioc.well_fbk, zero_int),
             (self.ioc.barcode_fbk, str), (self.ioc.running_fbk, int), (self.ioc.ln2_dew1_fbk, int),
             (self.ioc.ln2_dew2_fbk, int), (self.ioc.speed_fbk, int), (self.ioc.pucks_dew1_fbk, str),
-            (self.ioc.pucks_dew2_fbk, str), (self.ioc.pos_dew1_fbk, int), (self.ioc.pos_dew2_fbk, int)
+            (self.ioc.pucks_dew2_fbk, str), (self.ioc.pos_dew1_fbk, zero_int), (self.ioc.pos_dew2_fbk, zero_int)
         ]
 
     def ready_for_commands(self):
@@ -243,7 +251,7 @@ class BobCATSApp(object):
             self.parse_status(message)
         else:
             # process response messages
-            pass
+            self.ioc.log.put(message)
 
     def parse_status(self, message):
         patt = re.compile('^(?P<context>\w+)\((?P<msg>.*?)\)')
@@ -264,6 +272,11 @@ class BobCATSApp(object):
                         self.ioc.status.put(StatusType.IDLE.value)
                 else:
                     self.ioc.status.put(StatusType.ERROR.value)
+            elif details['context'] == 'do':
+                self.ioc.outputs_fbk.put(int(details['msg'].replace(',', ''), 2))
+            elif details['context'] == 'di':
+                self.ioc.inputs_fbk.put(int(details['msg'].replace(',', ''), 2))
+
 
 
     # callbacks

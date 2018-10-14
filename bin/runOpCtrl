@@ -1,0 +1,3 @@
+#!/bin/bash
+cd "${0%/*}" && cd ../op
+run-edm -m device=$1 -x robot.edl &

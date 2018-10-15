@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 601
-y 139
-w 946
-h 675
+x 281
+y 160
+w 699
+h 599
 font "lucida-medium-r-18.0"
 ctlFont "lucida-medium-r-18.0"
 btnFont "lucida-medium-r-18.0"
@@ -28,27 +28,13 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 228
-y 151
-w 401
-h 210
-lineColor index 5
-fillColor index 1
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 227
-y 370
-w 709
-h 83
+x 458
+y 142
+w 235
+h 402
 lineColor index 5
 fill
-fillColor index 74
+fillColor index 61
 endObjectProperties
 
 # (Rectangle)
@@ -58,11 +44,11 @@ major 4
 minor 0
 release 0
 x 11
-y 151
-w 207
-h 303
+y 367
+w 205
+h 123
 lineColor index 5
-fillColor index 4
+fillColor index 1
 endObjectProperties
 
 # (Text Control)
@@ -72,10 +58,10 @@ major 4
 minor 7
 release 0
 x 7
-y 562
-w 227
+y 556
+w 686
 h 26
-controlPv "$(device):STATE:MSG"
+controlPv "$(device):LOG"
 font "lucida-medium-r-10.0"
 fontAlign "center"
 fgColor index 53
@@ -87,62 +73,15 @@ newPos
 objType "controls"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 475
-y 562
-w 227
-h 26
-controlPv "$(device):STATE:WRN"
-font "lucida-medium-r-10.0"
-fontAlign "center"
-fgColor index 78
-bgColor index 9
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 77
-y 426
-w 58
-h 21
-fgColor index 14
-onColor index 40
-offColor index 40
-inconsistentColor index 44
-topShadowColor index 73
-botShadowColor index 57
-controlPv "$(device):CMD:clearAll"
-indicatorPv "$(device):CMD:clearAll"
-onLabel "Clear All"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 637
-y 115
-w 300
+x 224
+y 256
+w 153
 h 30
 fgColor index 14
 onColor index 75
@@ -159,256 +98,6 @@ font "lucida-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 17
-y 426
-w 58
-h 21
-fgColor index 14
-onColor index 59
-offColor index 59
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:inspect"
-indicatorPv "$(device):CMD:inspect"
-onLabel "Inspect"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 407
-y 380
-w 83
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:checkTool"
-indicatorPv "$(device):CMD:checkTool"
-onLabel "Chk Tool"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 528
-y 191
-w 92
-h 26
-fgColor index 14
-onColor index 40
-offColor index 40
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:clearPorts"
-indicatorPv "$(device):CMD:clearPorts"
-onLabel "Clear Ports"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 528
-y 159
-w 92
-h 26
-fgColor index 14
-onColor index 50
-offColor index 50
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:probe"
-indicatorPv "$(device):CMD:probe"
-onLabel "Probe"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 495
-y 380
-w 119
-h 27
-fgColor index 14
-onColor index 61
-offColor index 61
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:calTool"
-indicatorPv "$(device):CMD:calTool"
-onLabel "Calibrate Toolset"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 495
-y 412
-w 119
-h 27
-fgColor index 14
-onColor index 61
-offColor index 61
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:calCassette"
-indicatorPv "$(device):CMD:calCassette"
-onLabel "Calibrate Cassette"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 735
-y 411
-w 94
-h 27
-fgColor index 14
-onColor index 61
-offColor index 61
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:calGonio"
-indicatorPv "$(device):CMD:calGonio"
-onLabel "Calibrate Gonio"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 636
-y 380
-w 94
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:teachGonio"
-indicatorPv "$(device):CMD:teachGonio"
-onLabel "Teach Gonio"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 735
-y 380
-w 94
-h 27
-fgColor index 14
-onColor index 75
-offColor index 75
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:saveGonio"
-indicatorPv "$(device):CMD:saveGonio"
-onLabel "Save Gonio"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 636
-y 411
-w 94
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:gonioHome"
-indicatorPv "$(device):CMD:gonioHome"
-onLabel "Gonio Home"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
 # (Lines)
 object activeLineClass
 beginObjectProperties
@@ -416,19 +105,19 @@ major 4
 minor 0
 release 1
 x 12
-y 37
-w 927
+y 39
+w 672
 h 0
 lineColor index 5
 fillColor index 0
 numPoints 2
 xPoints {
   0 12
-  1 939
+  1 684
 }
 yPoints {
-  0 37
-  1 37
+  0 39
+  1 39
 }
 endObjectProperties
 
@@ -438,9 +127,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 115
+x 126
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -451,9 +140,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 115
+x 126
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -466,9 +155,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 117
+x 128
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):STATUS.DESC"
 format "string"
@@ -489,9 +178,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 116
+x 127
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):STATUS"
 font "lucida-bold-r-10.0"
@@ -519,9 +208,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 115
+x 126
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -532,9 +221,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 115
+x 126
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -547,9 +236,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 117
+x 128
 y 97
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:tool.DESC"
 format "string"
@@ -569,9 +258,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 116
+x 127
 y 110
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:tool"
 font "lucida-bold-r-10.0"
@@ -600,7 +289,7 @@ minor 0
 release 0
 x 11
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -613,7 +302,7 @@ minor 0
 release 0
 x 11
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -628,7 +317,7 @@ minor 7
 release 0
 x 13
 y 97
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:auto.DESC"
 format "string"
@@ -650,7 +339,7 @@ minor 7
 release 0
 x 12
 y 110
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:auto"
 font "lucida-bold-r-10.0"
@@ -677,9 +366,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 219
+x 241
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -690,9 +379,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 219
+x 241
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -705,9 +394,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 221
+x 243
 y 97
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:path.DESC"
 format "string"
@@ -727,9 +416,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 220
+x 242
 y 110
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:path"
 font "lucida-bold-r-10.0"
@@ -756,9 +445,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 323
+x 356
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -769,9 +458,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 323
+x 356
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -784,11 +473,11 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 325
+x 358
 y 97
-w 90
+w 98
 h 14
-controlPv "$(device):STATE:PREFETCHED.DESC"
+controlPv "$(device):STATE:onTool.DESC"
 format "string"
 font "lucida-medium-r-10.0"
 fgColor index 5
@@ -806,11 +495,11 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 324
+x 357
 y 110
-w 95
+w 104
 h 24
-controlPv "$(device):STATE:PREFETCHED"
+controlPv "$(device):STATE:onTool"
 font "lucida-bold-r-10.0"
 fontAlign "center"
 fgColor index 36
@@ -835,9 +524,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 219
+x 241
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -848,9 +537,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 219
+x 241
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -863,9 +552,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 221
+x 243
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:power.DESC"
 format "string"
@@ -885,9 +574,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 220
+x 242
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:power"
 font "lucida-bold-r-10.0"
@@ -907,56 +596,6 @@ endObjectProperties
 
 endGroup
 
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 858
-y 411
-w 68
-h 27
-fgColor index 14
-onColor index 71
-offColor index 71
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:LN2Mode"
-indicatorPv "$(device):CMD:LN2Mode"
-onLabel "LN2 Mode"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 858
-y 379
-w 68
-h 27
-fgColor index 14
-onColor index 71
-offColor index 71
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:RTMode"
-indicatorPv "$(device):CMD:RTMode"
-onLabel "RT Mode"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
 endObjectProperties
 
 # (Static Text)
@@ -985,7 +624,7 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 763
+x 511
 y 6
 w 175
 h 24
@@ -1001,588 +640,15 @@ font "lucida-bold-r-10.0"
 orientation "horizontal"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 241
-y 562
-w 227
-h 26
-controlPv "$(device):MESSAGE"
-font "lucida-medium-r-10.0"
-fontAlign "center"
-fgColor index 53
-bgColor index 9
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 82
-y 175
-w 11
-h 228
-controlPv "$(device):STATE:CODE"
-lineColor index 14
-onColor index 20
-offColor index 5
-endian "little"
-shift 8
-endObjectProperties
-
-# (Byte)
-object ByteClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 103
-y 175
-w 11
-h 98
-controlPv "$(device):STATE:CODE"
-lineColor index 14
-onColor index 20
-offColor index 5
-endian "little"
-numBits 7
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 177
-w 51
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Inspection"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 191
-w 27
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Reset"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 205
-w 41
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Tool Cal"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 219
-w 62
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Cassette Cal"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 234
-w 47
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Gonio Cal"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 248
-w 45
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Basic Cal"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 118
-y 263
-w 58
-h 11
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "User Action"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 23
-y 177
-w 56
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Emerg stop"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 28
-y 191
-w 51
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Safeguard"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 31
-y 205
-w 48
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Not home"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 65
-y 233
-w 14
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Lid"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 41
-y 247
-w 38
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Gripper"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 25
-y 262
-w 54
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "No Magnet"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 33
-y 290
-w 46
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Init Error"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 42
-y 304
-w 37
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Toolset"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 31
-y 318
-w 48
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "LN2 Level"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 45
-y 333
-w 34
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Heater"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 36
-y 347
-w 43
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Cassette"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 43
-y 361
-w 36
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Pin lost"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 18
-y 375
-w 61
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Wrong State"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 25
-y 390
-w 54
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Invalid Arg"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 29
-y 219
-w 52
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Cmd Error"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 32
-y 276
-w 47
-h 11
-font "lucida-medium-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Collission"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 102
-y 161
-w 63
-h 10
-font "lucida-bold-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "NEEDS"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 30
-y 163
-w 63
-h 7
-font "lucida-bold-r-10.0"
-fontAlign "right"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "ERRORS"
-}
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 323
+x 356
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -1593,9 +659,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 323
+x 356
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -1608,9 +674,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 325
+x 358
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:D1LN2.DESC"
 format "string"
@@ -1630,9 +696,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 324
+x 357
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:D1LN2"
 font "lucida-bold-r-10.0"
@@ -1662,7 +728,7 @@ minor 0
 release 0
 x 11
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -1675,7 +741,7 @@ minor 0
 release 0
 x 11
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -1690,7 +756,7 @@ minor 7
 release 0
 x 13
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):CONNECTED.DESC"
 format "string"
@@ -1712,7 +778,7 @@ minor 7
 release 0
 x 12
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):CONNECTED"
 font "lucida-bold-r-10.0"
@@ -1734,929 +800,15 @@ endGroup
 
 endObjectProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 195
-y 460
-w 742
-h 95
-lineColor index 5
-fill
-fillColor index 0
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 857
-y 526
-w 67
-h 22
-fgColor index 14
-onColor index 40
-offColor index 40
-inconsistentColor index 44
-topShadowColor index 73
-botShadowColor index 57
-controlPv "$(device):CMD:applyAttrs"
-indicatorPv "$(device):CMD:applyAttrs"
-onLabel "Apply"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 227
-y 467
-w 102
-h 16
-controlPv "$(device):ATTR:CHKFORCE.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 202
-y 467
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:CHKFORCE"
-indicatorPv "$(device):ATTR:CHKFORCE"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 227
-y 487
-w 104
-h 16
-controlPv "$(device):ATTR:PRBCASS.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 202
-y 487
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:PRBCASS"
-indicatorPv "$(device):ATTR:PRBCASS"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 227
-y 508
-w 104
-h 16
-controlPv "$(device):ATTR:PRBPORT.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 202
-y 508
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:PRBPORT"
-indicatorPv "$(device):ATTR:PRBPORT"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 227
-y 528
-w 104
-h 16
-controlPv "$(device):ATTR:CHKMAG.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 202
-y 528
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:CHKMAG"
-indicatorPv "$(device):ATTR:CHKMAG"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 370
-y 528
-w 102
-h 16
-controlPv "$(device):ATTR:STRICT.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 345
-y 528
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:STRICT"
-indicatorPv "$(device):ATTR:STRICT"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 370
-y 508
-w 102
-h 16
-controlPv "$(device):ATTR:DEVMODE.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 345
-y 508
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:DEVMODE"
-indicatorPv "$(device):ATTR:DEVMODE"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 370
-y 487
-w 104
-h 16
-controlPv "$(device):ATTR:CHKPICKER.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 345
-y 487
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:CHKPICKER"
-indicatorPv "$(device):ATTR:CHKPICKER"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 370
-y 467
-w 102
-h 16
-controlPv "$(device):ATTR:FILLOPENLID.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 345
-y 467
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:FILLOPENLID"
-indicatorPv "$(device):ATTR:FILLOPENLID"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 514
-y 467
-w 102
-h 16
-controlPv "$(device):ATTR:WASH.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 490
-y 467
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:WASH"
-indicatorPv "$(device):ATTR:WASH"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 514
-y 487
-w 102
-h 16
-controlPv "$(device):ATTR:HIGHSPEED.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 490
-y 487
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:HIGHSPEED"
-indicatorPv "$(device):ATTR:HIGHSPEED"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 514
-y 508
-w 102
-h 16
-controlPv "$(device):ATTR:RHTONG.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 490
-y 508
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:RHTONG"
-indicatorPv "$(device):ATTR:RHTONG"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 514
-y 528
-w 102
-h 16
-controlPv "$(device):ATTR:DELAYCAL.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 490
-y 528
-w 20
-h 16
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):ATTR:DELAYCAL"
-indicatorPv "$(device):ATTR:DELAYCAL"
-onLabel "X"
-labelType "literal"
-3d
-font "lucida-bold-r-8.0"
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 677
-y 528
-w 102
-h 16
-controlPv "$(device):ATTR:MAXLN2IDLE.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 632
-y 528
-w 40
-h 16
-controlPv "$(device):ATTR:MAXLN2IDLE"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 677
-y 508
-w 102
-h 16
-controlPv "$(device):ATTR:REHEATTIME.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 632
-y 508
-w 40
-h 16
-controlPv "$(device):ATTR:REHEATTIME"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 677
-y 487
-w 102
-h 16
-controlPv "$(device):ATTR:REHEATCOUNT.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 632
-y 487
-w 40
-h 16
-controlPv "$(device):ATTR:REHEATCOUNT"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 677
-y 467
-w 108
-h 16
-controlPv "$(device):ATTR:SOAKTIMEOUT.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 632
-y 467
-w 40
-h 16
-controlPv "$(device):ATTR:SOAKTIMEOUT"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 821
-y 508
-w 102
-h 16
-controlPv "$(device):ATTR:COOLTIME.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 776
-y 508
-w 40
-h 16
-controlPv "$(device):ATTR:COOLTIME"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 821
-y 487
-w 104
-h 16
-controlPv "$(device):ATTR:STRIPTHOLD.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 776
-y 487
-w 40
-h 16
-controlPv "$(device):ATTR:STRIPTHOLD"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 821
-y 467
-w 102
-h 16
-controlPv "$(device):ATTR:LOSSTHOLD.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 776
-y 467
-w 40
-h 16
-controlPv "$(device):ATTR:LOSSTHOLD"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 531
+x 586
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -2667,9 +819,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 531
+x 586
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -2682,9 +834,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 533
+x 588
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):ENABLED.DESC"
 format "string"
@@ -2704,9 +856,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 532
+x 587
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):ENABLED"
 font "lucida-bold-r-10.0"
@@ -2734,9 +886,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 531
+x 586
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -2747,9 +899,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 531
+x 586
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -2762,9 +914,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 533
+x 588
 y 97
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:speed.DESC"
 format "string"
@@ -2784,9 +936,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 532
+x 587
 y 110
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:speed"
 font "lucida-bold-r-10.0"
@@ -2815,9 +967,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 427
+x 471
 y 95
-w 98
+w 107
 h 40
 
 beginGroup
@@ -2828,9 +980,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 427
+x 471
 y 95
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -2843,11 +995,11 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 429
+x 473
 y 97
-w 90
+w 98
 h 14
-controlPv "$(device):STATE:PORT.DESC"
+controlPv "$(device):STATE:onDiff.DESC"
 format "string"
 font "lucida-medium-r-10.0"
 fgColor index 5
@@ -2865,11 +1017,11 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 428
+x 472
 y 110
-w 95
+w 104
 h 24
-controlPv "$(device):STATE:PORT"
+controlPv "$(device):STATE:onDiff"
 font "lucida-bold-r-10.0"
 fontAlign "center"
 fgColor index 36
@@ -2894,180 +1046,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 407
-y 412
-w 83
-h 27
-
-beginGroup
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 407
-y 412
-w 24
-h 27
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):PARAM:CALL"
-indicatorPv "$(device):PARAM:CALL"
-onLabel "L"
-offLabel "L"
-labelType "literal"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 436
-y 412
-w 24
-h 27
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):PARAM:CALM"
-indicatorPv "$(device):PARAM:CALM"
-onLabel "M"
-offLabel "M"
-labelType "literal"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 466
-y 412
-w 24
-h 27
-fgColor index 14
-onColor index 59
-offColor index 62
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 10
-controlPv "$(device):PARAM:CALR"
-indicatorPv "$(device):PARAM:CALR"
-onLabel "R"
-offLabel "R"
-labelType "literal"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 332
-y 380
-w 60
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:checkLid"
-indicatorPv "$(device):CMD:checkLid"
-onLabel "Chk Lid"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 242
-y 380
-w 86
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:checkGripper"
-indicatorPv "$(device):CMD:checkGripper"
-onLabel "Chk Gripper"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 242
-y 412
-w 86
-h 27
-fgColor index 14
-onColor index 64
-offColor index 64
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:checkHeater"
-indicatorPv "$(device):CMD:checkHeater"
-onLabel "Chk Heater"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 639
-y 47
-w 157
-h 29
+x 224
+y 184
+w 153
+h 28
 
 beginGroup
 
@@ -3077,10 +1059,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 639
-y 47
-w 156
-h 28
+x 224
+y 184
+w 152
+h 27
 lineColor index 9
 fillColor index 0
 endObjectProperties
@@ -3091,10 +1073,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 716
-y 47
-w 80
-h 29
+x 298
+y 184
+w 79
+h 28
 fgColor index 14
 onColor index 50
 offColor index 50
@@ -3116,19 +1098,21 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 642
-y 49
-w 74
+x 225
+y 186
+w 72
 h 24
-controlPv "$(device):PARAM:NEXTPORT"
+controlPv "$(device):PAR:nextPort"
 format "string"
-font "lucida-bold-r-10.0"
+font "lucida-bold-r-14.0"
 fontAlign "center"
 fgColor index 34
 bgColor index 0
 editable
+motifWidget
 nullColor index 0
 smartRefresh
+changeValOnLoseFocus
 useHexPrefix
 newPos
 objType "controls"
@@ -3144,10 +1128,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 639
-y 82
-w 157
-h 29
+x 224
+y 220
+w 153
+h 28
 
 beginGroup
 
@@ -3157,10 +1141,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 639
-y 82
-w 156
-h 28
+x 224
+y 220
+w 152
+h 27
 lineColor index 9
 fillColor index 0
 endObjectProperties
@@ -3171,10 +1155,10 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 715
-y 82
-w 81
-h 29
+x 297
+y 220
+w 80
+h 28
 fgColor index 14
 onColor index 55
 offColor index 55
@@ -3196,11 +1180,11 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 641
-y 84
-w 74
-h 25
-controlPv "$(device):STATE:PORT"
+x 226
+y 222
+w 71
+h 24
+controlPv "$(device):STATE:onDiff"
 font "lucida-bold-r-10.0"
 fontAlign "center"
 fgColor index 57
@@ -3216,237 +1200,17 @@ endGroup
 
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 710
-y 562
-w 227
-h 26
-
-beginGroup
-
-# (Bar)
-object activeBarClass
-beginObjectProperties
-major 4
-minor 1
-release 2
-x 710
-y 562
-w 227
-h 26
-indicatorColor index 33
-fgColor index 14
-bgColor index 3
-indicatorPv "$(device):STATE:PROG"
-origin "0"
-font "lucida-medium-r-10.0"
-border
-min "0"
-max "100"
-scaleFormat "FFloat"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 766
-y 566
-w 108
-h 20
-controlPv "$(device):STATE:PROG"
-font "lucida-bold-r-10.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 9
-useDisplayBg
-limitsFromDb
-nullColor index 0
-smartRefresh
-useHexPrefix
-showUnits
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 7
-y 592
-w 930
-h 28
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 7
-y 592
-w 6
-h 28
-lineColor index 14
-fill
-fillColor index 155
-lineWidth 0
-alarmPv "$(device):HEARTBEAT"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 13
-y 592
-w 924
-h 28
-controlPv "$(device):LOG"
-font "lucida-medium-r-10.0"
-fgColor index 160
-bgColor index 14
-limitsFromDb
-nullColor index 0
-colorPv "$(device):LOG:ALARM"
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 860
-y 251
-w 67
-h 23
-fgColor index 14
-onColor index 50
-offColor index 50
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:lid"
-indicatorPv "$(device):CMD:lid"
-onLabel "Open Lid"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 860
-y 277
-w 67
-h 23
-fgColor index 14
-onColor index 50
-offColor index 50
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:gripper"
-indicatorPv "$(device):CMD:gripper"
-onLabel "Open Gripper"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 860
-y 330
-w 67
-h 23
-fgColor index 14
-onColor index 50
-offColor index 50
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:dryer"
-indicatorPv "$(device):CMD:dryer"
-onLabel "Dryer"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 860
-y 303
-w 67
-h 23
-fgColor index 14
-onColor index 50
-offColor index 50
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:heater"
-indicatorPv "$(device):CMD:heater"
-onLabel "Heater"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
 # (Byte)
 object ByteClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 722
-y 176
+x 100
+y 171
 w 11
 h 175
-controlPv "$(device):INP"
+controlPv "$(device):STATE:inputs"
 lineColor index 14
 onColor index 101
 offColor index 10
@@ -3458,11 +1222,11 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 735
-y 176
+x 113
+y 171
 w 11
 h 175
-controlPv "$(device):OUT"
+controlPv "$(device):STATE:outputs"
 lineColor index 14
 onColor index 101
 offColor index 10
@@ -3474,10 +1238,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 637
-y 152
-w 299
-h 209
+x 11
+y 146
+w 203
+h 212
 lineColor index 5
 fillColor index 0
 endObjectProperties
@@ -3488,8 +1252,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 750
-y 209
+x 128
+y 204
 w 14
 h 11
 font "lucida-medium-r-10.0"
@@ -3508,8 +1272,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 750
-y 186
+x 128
+y 181
 w 38
 h 11
 font "lucida-medium-r-10.0"
@@ -3528,8 +1292,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 751
-y 319
+x 129
+y 314
 w 30
 h 11
 font "lucida-medium-r-10.0"
@@ -3548,8 +1312,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 750
-y 331
+x 128
+y 326
 w 34
 h 11
 font "lucida-medium-r-10.0"
@@ -3568,8 +1332,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 664
-y 176
+x 42
+y 171
 w 55
 h 11
 font "lucida-medium-r-10.0"
@@ -3589,8 +1353,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 671
-y 186
+x 49
+y 181
 w 48
 h 11
 font "lucida-medium-r-10.0"
@@ -3610,8 +1374,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 662
-y 198
+x 40
+y 193
 w 57
 h 11
 font "lucida-medium-r-10.0"
@@ -3631,8 +1395,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 666
-y 318
+x 44
+y 313
 w 53
 h 11
 font "lucida-medium-r-10.0"
@@ -3652,8 +1416,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 676
-y 307
+x 54
+y 302
 w 43
 h 11
 font "lucida-medium-r-10.0"
@@ -3673,8 +1437,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 670
-y 297
+x 48
+y 292
 w 49
 h 11
 font "lucida-medium-r-10.0"
@@ -3694,8 +1458,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 646
-y 274
+x 24
+y 269
 w 73
 h 11
 font "lucida-medium-r-10.0"
@@ -3715,8 +1479,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 654
-y 263
+x 32
+y 258
 w 65
 h 11
 font "lucida-medium-r-10.0"
@@ -3736,8 +1500,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 737
-y 161
+x 115
+y 156
 w 63
 h 10
 font "lucida-bold-r-10.0"
@@ -3755,8 +1519,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 668
-y 161
+x 46
+y 156
 w 63
 h 10
 font "lucida-bold-r-10.0"
@@ -3769,257 +1533,16 @@ value {
 }
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 12
-y 467
-w 108
-h 16
-
-beginGroup
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 12
-y 467
-w 108
-h 16
-controlPv "$(device):TIMER:REHEAT.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 133
-y 467
-w 57
-h 16
-controlPv "$(device):TIMER:REHEAT"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 12
-y 488
-w 108
-h 16
-
-beginGroup
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 12
-y 488
-w 108
-h 16
-controlPv "$(device):TIMER:SAMPLES.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 133
-y 488
-w 57
-h 16
-controlPv "$(device):TIMER:SAMPLES"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 12
-y 509
-w 108
-h 16
-
-beginGroup
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 12
-y 509
-w 108
-h 16
-controlPv "$(device):TIMER:HOME.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 133
-y 509
-w 57
-h 16
-controlPv "$(device):TIMER:HOME"
-format "string"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-editable
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-newPos
-objType "controls"
-endObjectProperties
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 7
-y 628
-w 878
-h 27
-controlPv "$(device):PARAM:COMMAND"
-format "string"
-font "courier-medium-r-14.0"
-fgColor index 14
-bgColor index 0
-editable
-motifWidget
-limitsFromDb
-nullColor index 0
-changeValOnLoseFocus
-fastUpdate
-useHexPrefix
-newPos
-objType "controls"
-characterMode
-endObjectProperties
-
 # (Button)
 object activeButtonClass
 beginObjectProperties
 major 4
 minor 1
 release 0
-x 888
-y 628
-w 49
-h 28
-fgColor index 14
-onColor index 20
-offColor index 20
-inconsistentColor index 14
-topShadowColor index 0
-botShadowColor index 10
-controlPv "$(device):CMD:sendRaw"
-onLabel "Send"
-offLabel "Send"
-buttonType "push"
-3d
-font "lucida-medium-r-10.0"
-objType "controls"
-endObjectProperties
-
-# (Button)
-object activeButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 877
-y 47
-w 60
-h 29
+x 224
+y 331
+w 73
+h 30
 fgColor index 14
 onColor index 1
 offColor index 1
@@ -4041,19 +1564,19 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 809
-y 81
-w 60
-h 29
+x 303
+y 331
+w 73
+h 30
 fgColor index 14
 onColor index 63
 offColor index 63
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 10
-controlPv "$(device):CMD:soak"
-indicatorPv "$(device):CMD:soak"
-onLabel "Soak"
+controlPv "$(device):CMD:pause"
+indicatorPv "$(device):CMD:pause"
+onLabel "Pause"
 buttonType "push"
 3d
 font "lucida-medium-r-10.0"
@@ -4066,19 +1589,19 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 877
-y 81
-w 60
-h 29
+x 303
+y 292
+w 73
+h 30
 fgColor index 14
 onColor index 55
 offColor index 55
 inconsistentColor index 57
 topShadowColor index 0
 botShadowColor index 10
-controlPv "$(device):CMD:dry"
-indicatorPv "$(device):CMD:dry"
-onLabel "Dry"
+controlPv "$(device):CMD:back"
+indicatorPv "$(device):CMD:back"
+onLabel "Back"
 buttonType "push"
 3d
 font "lucida-medium-r-10.0"
@@ -4091,367 +1614,34 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 809
-y 47
-w 60
-h 29
+x 224
+y 292
+w 73
+h 30
 fgColor index 14
 onColor index 51
 offColor index 51
 inconsistentColor index 14
 topShadowColor index 0
 botShadowColor index 10
-controlPv "$(device):CMD:prefetch"
-indicatorPv "$(device):CMD:prefetch"
-onLabel "Prefetch"
+controlPv "$(device):CMD:clear"
+indicatorPv "$(device):CMD:clear"
+onLabel "Clear"
 buttonType "push"
 3d
 font "lucida-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 133
-y 529
-w 57
-h 16
-controlPv "$(device):TIMER:ELAPSED"
-font "helvetica-medium-r-8.0"
-fontAlign "center"
-fgColor index 35
-bgColor index 9
-nullColor index 0
-smartRefresh
-useKp
-fastUpdate
-showUnits
-newPos
-objType "controls"
-endObjectProperties
-
 # (Group)
 object activeGroupClass
 beginObjectProperties
 major 4
 minor 0
 release 0
-x 12
-y 529
-w 108
-h 16
-
-beginGroup
-
-# (Text Control)
-object activeXTextDspClass
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 12
-y 529
-w 108
-h 16
-controlPv "$(device):TIMER:ELAPSED.DESC"
-font "lucida-medium-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-nullColor index 0
-useHexPrefix
-newPos
-objType "controls"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (X-Y Graph)
-object xyGraphClass
-beginObjectProperties
-major 4
-minor 8
-release 0
-# Geometry
-x 303
-y 158
-w 200
-h 42
-# Appearance
-plotAreaBorder
-fgColor index 14
-bgColor index 9
-gridColor index 14
-font "lucida-medium-r-18.0"
-# Operating Modes
-nPts 2
-# X axis properties
-xAxisSrc "fromUser"
-xMin -2
-xMax 98
-# Y axis properties
-yAxisSrc "fromUser"
-yMin -2
-yMax 5
-# Y2 axis properties
-y2AxisSrc "AutoScale"
-y2Max 1
-# Trace Properties
-numTraces 1
-yPv {
-  0 "$(device):PORTS:L"
-}
-plotStyle {
-  0 "needle"
-}
-ySigned {
-  0 1
-}
-plotColor {
-  0 index 36
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 265
-y 169
-w 6
-h 11
-font "lucida-bold-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "L"
-}
-autoSize
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 241
-y 181
-w 62
-h 11
-controlPv "$(device):CASSETTE:L"
-font "lucida-medium-r-10.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (X-Y Graph)
-object xyGraphClass
-beginObjectProperties
-major 4
-minor 8
-release 0
-# Geometry
-x 303
-y 225
-w 200
-h 42
-# Appearance
-plotAreaBorder
-fgColor index 14
-bgColor index 9
-gridColor index 14
-font "lucida-medium-r-18.0"
-# Operating Modes
-nPts 2
-# X axis properties
-xAxisSrc "fromUser"
-xMin -2
-xMax 98
-# Y axis properties
-yAxisSrc "fromUser"
-yMin -2
-yMax 5
-# Y2 axis properties
-y2AxisSrc "fromUser"
-y2Min -10
-y2Max 2
-# Trace Properties
-numTraces 1
-yPv {
-  0 "$(device):PORTS:M"
-}
-plotStyle {
-  0 "needle"
-}
-ySigned {
-  0 1
-}
-plotColor {
-  0 index 36
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 265
-y 232
-w 10
-h 11
-font "lucida-bold-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "M"
-}
-autoSize
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 241
-y 246
-w 62
-h 11
-controlPv "$(device):CASSETTE:M"
-font "lucida-medium-r-10.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (X-Y Graph)
-object xyGraphClass
-beginObjectProperties
-major 4
-minor 8
-release 0
-# Geometry
-x 303
-y 292
-w 200
-h 42
-# Appearance
-plotAreaBorder
-fgColor index 14
-bgColor index 9
-gridColor index 14
-font "lucida-medium-r-18.0"
-# Operating Modes
-nPts 2
-# X axis properties
-xAxisSrc "fromUser"
-xMin -2
-xMax 98
-# Y axis properties
-yAxisSrc "fromUser"
-yMin -2
-yMax 5
-# Y2 axis properties
-y2AxisSrc "AutoScale"
-y2Max 1
-# Trace Properties
-numTraces 1
-yPv {
-  0 "$(device):PORTS:R"
-}
-plotStyle {
-  0 "needle"
-}
-ySigned {
-  0 1
-}
-plotColor {
-  0 index 36
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 265
-y 298
-w 7
-h 11
-font "lucida-bold-r-10.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "R"
-}
-autoSize
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 7
-release 0
-x 241
-y 315
-w 62
-h 11
-controlPv "$(device):CASSETTE:R"
-font "lucida-medium-r-10.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-autoHeight
-limitsFromDb
-nullColor index 0
-useHexPrefix
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 427
+x 471
 y 47
-w 98
+w 107
 h 40
 
 beginGroup
@@ -4462,9 +1652,9 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 427
+x 471
 y 47
-w 98
+w 107
 h 40
 lineColor index 14
 fill
@@ -4477,9 +1667,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 429
+x 473
 y 49
-w 90
+w 98
 h 14
 controlPv "$(device):STATE:D2LN2.DESC"
 format "string"
@@ -4499,9 +1689,9 @@ beginObjectProperties
 major 4
 minor 7
 release 0
-x 428
+x 472
 y 62
-w 95
+w 104
 h 24
 controlPv "$(device):STATE:D2LN2"
 font "lucida-bold-r-10.0"
@@ -4521,5 +1711,1269 @@ endObjectProperties
 
 endGroup
 
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 255
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:setSample"
+indicatorPv "$(device):CMD:setSample"
+onLabel "Set Sample"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 327
+w 73
+h 30
+fgColor index 14
+onColor index 55
+offColor index 55
+inconsistentColor index 57
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:toolCal"
+indicatorPv "$(device):CMD:toolCal"
+onLabel "Calibrate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 291
+w 73
+h 30
+fgColor index 14
+onColor index 55
+offColor index 55
+inconsistentColor index 57
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:setTool"
+indicatorPv "$(device):CMD:setTool"
+onLabel "Set Tool"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:get"
+indicatorPv "$(device):CMD:get"
+onLabel "Get"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 183
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:put"
+indicatorPv "$(device):CMD:put"
+onLabel "Put"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 383
+y 219
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:getPut"
+indicatorPv "$(device):CMD:getPut"
+onLabel "Get Put"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 138
+y 404
+w 65
+h 32
+fgColor index 14
+onColor index 59
+offColor index 75
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:lid"
+indicatorPv "$(device):CMD:lid"
+onLabel "Open Lid"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 224
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 40
+offColor index 40
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:power"
+indicatorPv "$(device):CMD:power"
+onLabel "Power"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 304
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 40
+offColor index 40
+inconsistentColor index 44
+topShadowColor index 73
+botShadowColor index 57
+controlPv "$(device):CMD:restart"
+indicatorPv "$(device):CMD:restart"
+onLabel "Restart"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 22
+y 407
+w 101
+h 12
+controlPv "$(device):STATE:pucks1"
+lineColor index 14
+onColor index 101
+offColor index 10
+endian "little"
+numBits 9
+endObjectProperties
+
+# (Byte)
+object ByteClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 22
+y 424
+w 101
+h 12
+controlPv "$(device):STATE:pucks2"
+lineColor index 14
+onColor index 101
+offColor index 10
+endian "little"
+numBits 9
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 21
+y 393
+w 103
+h 10
+font "lucida-bold-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PUCK DETECTION"
+}
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 226
+y 384
+w 40
+h 107
+fgColor index 14
+bgColor index 56
+selectColor index 40
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 57
+controlPv "$(device):PAR:lid"
+indicatorPv "$(device):PAR:lid"
+font "lucida-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 231
+y 366
+w 33
+h 12
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "LID"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 335
+y 372
+w 119
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 335
+y 387
+w 119
+h 23
+controlPv "$(device):PAR:smpl"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 335
+y 372
+w 119
+h 12
+controlPv "$(device):PAR:smpl.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 283
+y 384
+w 40
+h 106
+fgColor index 14
+bgColor index 56
+selectColor index 40
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 57
+controlPv "$(device):PAR:tool"
+indicatorPv "$(device):PAR:tool"
+font "lucida-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 287
+y 368
+w 33
+h 12
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Tool"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 461
+y 147
+w 228
+h 361
+font "lucidabright-bold-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 69
+useDisplayBg
+visPv "$(device):OPT:plates"
+visInvert
+visMin "1"
+visMax "2"
+value {
+  "Plate Tool"
+  "Not Installed"
+}
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 530
+y 517
+w 159
+h 22
+fgColor index 14
+bgColor index 76
+selectColor index 54
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(device):OPT:plates"
+indicatorPv "$(device):OPT:plates"
+font "lucida-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 461
+y 147
+w 228
+h 355
+
+beginGroup
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 462
+y 329
+w 70
+h 28
+fgColor index 14
+bgColor index 50
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(device):PAR:plateType"
+indicatorPv "$(device):PAR:plateType"
+font "lucida-medium-r-10.0"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 461
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:getPlate"
+indicatorPv "$(device):CMD:getPlate"
+onLabel "Get Plate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 461
+y 219
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:putPlate"
+indicatorPv "$(device):CMD:putPlate"
+onLabel "Put Plate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 461
+y 183
+w 73
+h 30
+fgColor index 14
+onColor index 51
+offColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:getPutPlate"
+indicatorPv "$(device):CMD:getPutPlate"
+onLabel "Get Put Plate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 461
+y 291
+w 73
+h 30
+fgColor index 14
+onColor index 55
+offColor index 55
+inconsistentColor index 57
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:adjPlate"
+indicatorPv "$(device):CMD:adjPlate"
+onLabel "Adjust Plate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 461
+y 255
+w 73
+h 30
+fgColor index 14
+onColor index 55
+offColor index 55
+inconsistentColor index 57
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:tiltPlate"
+indicatorPv "$(device):CMD:tiltPlate"
+onLabel "Tilt Plate"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 616
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 63
+offColor index 63
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:expose"
+indicatorPv "$(device):CMD:expose"
+onLabel "Expose"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 539
+y 147
+w 73
+h 30
+fgColor index 14
+onColor index 63
+offColor index 63
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 10
+controlPv "$(device):CMD:collect"
+indicatorPv "$(device):CMD:collect"
+onLabel "Collect"
+buttonType "push"
+3d
+font "lucida-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 461
+y 374
+w 111
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 389
+w 111
+h 23
+controlPv "$(device):PAR:plate"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 374
+w 111
+h 12
+controlPv "$(device):PAR:plate.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 578
+y 374
+w 111
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 578
+y 389
+w 111
+h 23
+controlPv "$(device):PAR:well"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 578
+y 374
+w 111
+h 12
+controlPv "$(device):PAR:well.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 578
+y 419
+w 111
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 578
+y 434
+w 111
+h 23
+controlPv "$(device):PAR:adjustX"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 578
+y 419
+w 111
+h 12
+controlPv "$(device):PAR:adjustX.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 461
+y 464
+w 111
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 479
+w 111
+h 23
+controlPv "$(device):PAR:adjustY"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 464
+w 111
+h 12
+controlPv "$(device):PAR:adjustY.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 461
+y 419
+w 111
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 434
+w 111
+h 23
+controlPv "$(device):PAR:plateAng"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 461
+y 419
+w 111
+h 12
+controlPv "$(device):PAR:plateAng.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 541
+y 185
+w 147
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 200
+w 147
+h 23
+controlPv "$(device):PAR:startAng"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 185
+w 147
+h 12
+controlPv "$(device):PAR:startAng.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 541
+y 231
+w 147
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 246
+w 147
+h 23
+controlPv "$(device):PAR:delta"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 231
+w 147
+h 12
+controlPv "$(device):PAR:delta.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 541
+y 277
+w 147
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 292
+w 147
+h 23
+controlPv "$(device):PAR:steps"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 277
+w 147
+h 12
+controlPv "$(device):PAR:steps.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 541
+y 323
+w 147
+h 38
+
+beginGroup
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 338
+w 147
+h 23
+controlPv "$(device):PAR:endAng"
+font "lucida-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+useKp
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 541
+y 323
+w 147
+h 12
+controlPv "$(device):PAR:endAng.DESC"
+font "lucida-medium-r-10.0"
+fgColor index 12
+bgColor index 0
+useDisplayBg
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+endGroup
+
+visPv "$(device):OPT:plates"
+visInvert
+visMin "0"
+visMax "1"
 endObjectProperties
 

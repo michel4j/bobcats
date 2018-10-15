@@ -12,6 +12,7 @@ logger = log.get_module_logger(__name__)
 NUM_PUCK_SAMPLES = 10
 NUM_PLATES = 8
 NUM_WELLS = 192
+NUM_ROW_WELLS = 24
 STATUS_TIME = 0.1
 
 
@@ -60,15 +61,19 @@ class BobCATS(models.Model):
     ln2_dew1_fbk = models.Enum('STATE:D1LN2', choices=('OFF', 'ON'), desc='Dewar 1 LN2')
     ln2_dew2_fbk = models.Enum('STATE:D2LN2', choices=('OFF', 'ON'), desc='Dewar 2 LN2')
     speed_fbk = models.Integer('STATE:speed', min_val=0, max_val=100, units='%', desc='Speed Ratio')
-    pucks_dew1_fbk = models.String('STATE:pucks1', max_length=NUM_PUCK_SAMPLES*3, desc='Puck Detection 1')
-    pucks_dew2_fbk = models.String('STATE:pucks2', max_length=NUM_PUCK_SAMPLES*3, desc='Puck Detection 2')
+    pucks_dew1_fbk = models.BinaryInput('STATE:pucks1', desc='Puck Detection 1')
+    pucks_dew2_fbk = models.BinaryInput('STATE:pucks2', desc='Puck Detection 2')
     pos_dew1_fbk = models.Integer('STATE:pos1', desc='Position Dewar 1')
     pos_dew2_fbk = models.Integer('STATE:pos2', desc='Position Dewar 2')
 
+    mounted_fbk = models.String('STATE:onDiff', max_length=40, desc='Mounted')
+    tooled_fbk = models.String('STATE:onTool', max_length=40, desc='Picked')
+
     #options
-    plates_enabled = models.Enum('OPT:plates', choices=('OFF', 'ON'), default=0, desc='Plates Enabled')
+    plates_enabled = models.Enum('OPT:plates', choices=('Plates OFF', 'Plates ON'), default=0, desc='Plates Enabled')
 
     # Params
+    next_param = models.String('PAR:nextPort', max_length=40, default='', desc='Port')
     lid_param = models.Enum('PAR:lid', choices=('NONE', 'LID1', 'LID2', 'LID3'), default=0, desc='Selected Lid')
     sample_param = models.Integer('PAR:smpl', min_val=0, max_val=NUM_PUCK_SAMPLES*3, default=0, desc='Selected Sample')
     tool_param = models.Enum('PAR:tool', choices=ToolType, default=2, desc='Selected Tool')
@@ -76,9 +81,9 @@ class BobCATS(models.Model):
     well_param = models.Integer('PAR:well', min_val=0, max_val=NUM_WELLS, desc='Selected Well')
     plate_type = models.Enum('PAR:plateType', choices=PlateType, desc='Plate Type')
     plate_drop = models.Integer('PAR:drop', min_val=0, max_val=NUM_PLATES, desc='Plate Drop Place')
-    adjust_x = models.Float('PAR:adjustX', units='mm', desc='X Adjustment')
-    adjust_y = models.Float('PAR:adjustY', units='mm', desc='Y Adjustment')
-    adjust_z = models.Float('PAR:adjustZ', units='mm', desc='Z Adjustment')
+    adjust_x = models.Float('PAR:adjustX', units='mm', desc='X Adjust')
+    adjust_y = models.Float('PAR:adjustY', units='mm', desc='Y Adjust')
+    adjust_z = models.Float('PAR:adjustZ', units='mm', desc='Z Adjust')
     plate_angle = models.Float('PAR:plateAng', units='deg', desc='Plate Angle')
 
     # exposure params
@@ -89,45 +94,73 @@ class BobCATS(models.Model):
     end_angle = models.Float('PAR:endAng', units='deg', desc='End Angle')
 
     # Commands
-    lid_cmd = models.Toggle('CMD:lid', zname='CLOSE', oname='OPEN', high=0, desc='Lid Toggle')
-    put_cmd = models.Toggle('CMD:put', zname='Put', desc='Mount')
-    get_cmd = models.Toggle('CMD:get', zname='Get', desc='Dismount')
-    getput_cmd = models.Toggle('CMD:getPut', zname='GetPut', desc='Mount Next')
+    power_cmd = models.Toggle('CMD:power', zname='Power OFF', oname='Power ON', high=0, desc='Power')
+    lid_cmd = models.Toggle('CMD:lid', zname='Open Lid', oname='Close Lid', high=0, desc='Lid Toggle')
+    put_cmd = models.Toggle('CMD:put', zname='Put', desc='Put Pin')
+    get_cmd = models.Toggle('CMD:get', zname='Get', desc='Get Pin')
+    getput_cmd = models.Toggle('CMD:getPut', zname='GetP ut', desc='Get Put Pin')
     pause_cmd = models.Toggle('CMD:pause', zname='Pause', desc='Pause')
-    tool_cmd = models.Toggle('CMD:setTool', zname='SetTool', desc='Set Tool')
-    calib_cmd = models.Toggle('CMD:toolCal', zname='ToolCal', desc='Cal Tool')
+    tool_cmd = models.Toggle('CMD:setTool', zname='Set Tool', desc='Set Tool')
+    calib_cmd = models.Toggle('CMD:toolCal', zname='Tool Cal', desc='Cal Tool')
     back_cmd = models.Toggle('CMD:back', zname='Back', desc='Back')
     clear_cmd = models.Toggle('CMD:clear', zname='Clear', desc='Clear')
     abort_cmd = models.Toggle('CMD:abort', zname='Abort', desc='Abort')
-    set_cmd = models.Toggle('CMD:setSample', zname='SetSample', desc='Set Sample')
+    set_cmd = models.Toggle('CMD:setSample', zname='Set Sample', desc='Set Sample')
+    home_cmd = models.Toggle('CMD:home', zname='Home', desc='Home')
 
     # Plate commands
-    put_plate_cmd = models.Toggle('CMD:putPlate', desc='Mount Plate')
-    get_plate_cmd = models.Toggle('CMD:getPlate', desc='Dismount Plate')
-    getput_plate_cmd = models.Toggle('CMD:getPutPlate', desc='Mount Next Plate')
+    put_plate_cmd = models.Toggle('CMD:putPlate', desc='Put Plate')
+    get_plate_cmd = models.Toggle('CMD:getPlate', desc='Get Plate')
+    getput_plate_cmd = models.Toggle('CMD:getPutPlate', desc='Get Put Plate')
     adjust_cmd = models.Toggle('CMD:adjPlate', desc='Adjust Plate')
     tilt_cmd = models.Toggle('CMD:tiltPlate', desc='Tilt Plate')
     expose_cmd = models.Toggle('CMD:expose', desc='Expose')
+    collect_cmd = models.Toggle('CMD:collect', desc='Collect')
     restart_cmd = models.Toggle('CMD:restart', desc='Restart')
-    power_on = models.Toggle('CMD:powerOn', desc='Power On')
-    power_off = models.Toggle('CMD:powerOff', desc='Power Off')
+
+    # Simplified commands
+    dismount_cmd = models.Toggle('CMD:dismount', desc='Dismount')
+    mount_cmd = models.Toggle('CMD:mount', desc='Mount')
 
 
 def port2args(port):
-    # converts 'L1C1' to lid=1, sample=21 for SPINE puck where NUM_PUCK_SAMPLES = 10
-    if len(port) < 4: return (0, 0)
-    try:
-        pin_number = int(port[3:])
-        sample_number = 'ABC'.index(port[2])*NUM_PUCK_SAMPLES + int(port[3:])
-        return int(port[1]), sample_number
-    except ValueError:
-        return (0, 0)
+    # converts 'L1C1' to lid=1, sample=21, tool=2 for SPINE puck where NUM_PUCK_SAMPLES = 10
+    # converts 'P2B1' to plate=2, well=24, tool=3 for Plates puck where NUM_ROW_WELLS = 24
+    if len(port) < 4: return {}
+    args = {}
+    if port.startswith('L'):
+        args = {
+            'tool': ToolType.PUCK.value,
+            'lid': zero_int(port[1]),
+            'sample' : 'ABC'.index(port[2])*NUM_PUCK_SAMPLES + zero_int(port[3:]),
+            'mode': 'puck'
+        }
+    elif port.startswith('P'):
+        args = {
+            'tool': ToolType.PLATE.value,
+            'plate': zero_int(port[1]),
+            'well': 'ABCDEFGH'.index(port[2])*NUM_ROW_WELLS + zero_int(port[3:]),
+            'mode': 'plate'
+        }
+    return args
 
 
-def args2port(lid, sample):
+def pin2port(lid, sample):
     # converts lid=1, sample=21 to 'L1C1'
     puck, pin = divmod(sample, NUM_PUCK_SAMPLES)
-    return 'L{}{}{}'.format(lid, 'ABC'[puck], pin)
+    if all((lid, pin)):
+        return 'L{}{}{}'.format(lid, 'ABC'[puck], pin)
+    else:
+        return ''
+
+
+def plate2port(plate, well):
+    # converts plate=1, well=21 to 'P1A21'
+    row, sample = divmod(well, NUM_ROW_WELLS)
+    if all((plate, sample)):
+        return 'P{}{}{}'.format(plate, 'ABCDEFGH'[row], sample)
+    else:
+        return ''
 
 
 def zero_int(text):
@@ -135,6 +168,7 @@ def zero_int(text):
         return int(text)
     except ValueError:
         return 0
+
 
 class BobCATSApp(object):
     def __init__(self, device_name, address, command_port=1000, status_port=10000):
@@ -277,9 +311,50 @@ class BobCATSApp(object):
             elif details['context'] == 'di':
                 self.ioc.inputs_fbk.put(int(details['msg'].replace(',', ''), 2))
 
-
-
     # callbacks
+    def do_mount_cmd(self, pv, value, ioc):
+        if value:
+            port = ioc.next_param.get().strip()
+            current = ioc.mounted_fbk.get().strip()
+            params = port2args(port)
+            plate_type = ioc.plate_type.get()
+            if all(params.values()):
+                if params['mode'] == 'puck':
+                    command = 'put' if not current else 'getput'
+                    args = (params['tool'], params['lid'], params['sample']) + 10 * (0,)
+                elif params['mode'] == 'plate':
+                    ontool = ioc.tooled_fbk.get().strip()
+                    command = 'putplate' if not ontool else 'getputplate'
+                    args = (params['tool'],) + 4*(0, )+(params['plate'], params['well'], plate_type)
+                else:
+                    return
+                self.send_command(command, *args)
+
+    def do_dismount_cmd(self, pv, value, ioc):
+        if value:
+            current = ioc.mounted_fbk.get().strip()
+            params = port2args(current)
+            if all(params.values()):
+                if params['mode'] == 'puck':
+                    command = 'get'
+                elif params['mode'] == 'plate':
+                    command = 'getplate'
+                else:
+                    return
+                self.send_command(command, params['tool'])
+
+    def do_sample_diff_fbk(self, pv, value, ioc):
+        port = pin2port(ioc.lid_diff_fbk.get(), value)
+        ioc.mounted_fbk.put(port)
+
+    def do_sample_tool_fbk(self, pv, value, ioc):
+        port = pin2port(ioc.lid_tool_fbk.get(), value)
+        ioc.tooled_fbk.put(port)
+
+    def do_well_fbk(self, pv, value, ioc):
+        port = plate2port(ioc.plate_fbk.get(), value)
+        ioc.tooled_fbk.put(port)
+
     def do_lid_cmd(self, pv, value, ioc):
         lid = ioc.lid_param.get()
         if lid:
@@ -318,6 +393,11 @@ class BobCATSApp(object):
         if value and tool:
             self.send_command('home', tool)
 
+    def do_home_cmd(self, pv, value, ioc):
+        tool = ioc.tool_param.get()
+        if value and tool:
+            self.send_command('home', tool)
+
     def do_calib_cmd(self, pv, value, ioc):
         tool = ioc.tool_param.get()
         if value and tool:
@@ -340,14 +420,12 @@ class BobCATSApp(object):
         if value :
             self.send_command('restart')
 
-    def do_power_off(self, pv, value, ioc):
-        if value :
-            self.send_command('off')
-
-    def do_power_on(self, pv, value, ioc):
+    def do_power_cmd(self, pv, value, ioc):
         if value :
             self.send_command('reset')
             reactor.callLater(1, self.send_command, 'on')
+        else:
+            self.send_command('off')
 
     def do_set_cmd(self, pv, value, ioc):
         lid = ioc.lid_param.get()
